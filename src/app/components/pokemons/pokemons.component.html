@@ -1,0 +1,9 @@
+<div class="container">
+    <h1>Pokedex</h1>
+    <ul class="list-group">
+        <a *ngFor="let poke of pokemon" [routerLink]="['/pokemon', getIdPkm(poke.url)]" class="list-group-item list-group-item-action animate__animated animate__bounce animate__fadeIn">
+            {{getIdPkm(poke.url)}} - {{poke.name}}
+        </a>
+        <a class="list-group-item list-group-item-success btn animate__animated animate__bounce animate__fadeIn" (click)="loadMore()">Más</a>
+    </ul>
+</div>
